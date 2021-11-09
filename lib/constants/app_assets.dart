@@ -13,7 +13,8 @@ class AppAssets {
 
 
   /// svg icons
-
+  static const String heart = "assets/icons/svg/heart.svg";
+  static const String dislike = "assets/icons/svg/dislike.svg";
 
   /// background
 

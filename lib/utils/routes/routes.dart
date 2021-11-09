@@ -1,4 +1,5 @@
 import 'package:omar_alshyokh_test/ui/home/pages/home_page.dart';
+import 'package:omar_alshyokh_test/ui/profile/pages/user_details_page.dart';
 import 'package:omar_alshyokh_test/ui/main/main_root.dart';
 import 'package:omar_alshyokh_test/ui/splash/splash.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class Routes {
   /// main pages
   static const String mainRootPage = '/ui/MainRootPage/';
   static const String home = '/home';
+  static const String userDetailsPage = '/UserDetailsPage';
 
 
 
@@ -34,6 +36,7 @@ class Routes {
 
     mainRootPage: (BuildContext context) => MainRootPage(),
     home: (BuildContext context) => HomeScreen(),
+    userDetailsPage: (BuildContext context) => UserDetailsPage(),
 
   };
 

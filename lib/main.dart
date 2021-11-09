@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:omar_alshyokh_test/blocs/simple_bloc_delegate.dart';
-import 'package:omar_alshyokh_test/state/category_store.dart';
+import 'package:omar_alshyokh_test/state_management/category_store.dart';
 import 'package:omar_alshyokh_test/ui/my_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

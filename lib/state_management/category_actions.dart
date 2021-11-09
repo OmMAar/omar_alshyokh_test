@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 import 'package:omar_alshyokh_test/data/repo/repository.dart';
 import 'package:omar_alshyokh_test/di/components/service_locator.dart';
-import 'package:omar_alshyokh_test/state/category_state.dart';
-import 'package:omar_alshyokh_test/state/category_store.dart';
+import 'package:omar_alshyokh_test/state_management/category_state.dart';
+import 'package:omar_alshyokh_test/state_management/category_store.dart';
 import 'package:redux/redux.dart';
 
 @immutable

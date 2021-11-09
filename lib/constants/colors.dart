@@ -34,6 +34,9 @@ class AppColors {
   static const Color secondBac = Color(0xff0627A2);
   static const Color mainEndBG = Color(0xff000a7c);
   static const Color mainStartBG = Color(0xff000bbf);
+  static const Color cardBG = Color(0xff495896);
+  static const Color dividerColor = Color(0xff0A2175);
+  static const Color reportButton = Color(0xff081C71);
 
 }
 

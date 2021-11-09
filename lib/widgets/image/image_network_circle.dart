@@ -1,12 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:omar_alshyokh_test/constants/app_constants.dart';
 
 class ImageNetworkCircleWidget extends StatefulWidget {
   final String? imageUrl;
   final double? imageHeight;
   final double? imageWidth;
   final double? imageBorderRadius;
+  final double indicatorSize;
   final bool imageBorderRadiusTopLeft;
   final bool imageBorderRadiusTopRight;
   final bool imageBorderRadiusBottomLeft;
@@ -21,6 +24,7 @@ class ImageNetworkCircleWidget extends StatefulWidget {
     this.imageWidth,
     this.isCache = false,
     this.imageBorderRadius =0.0,
+    this.indicatorSize =20.0,
     this.imageBorderRadiusTopLeft = true,
     this.imageBorderRadiusTopRight = true,
     this.imageBorderRadiusBottomLeft = true,
@@ -72,8 +76,7 @@ class _CustomImageDemoState extends State<ImageNetworkCircleWidget>
             height: widget.imageHeight,
             child: CachedNetworkImage(
               imageUrl: widget.imageUrl??"",
-              placeholder: (context, url) =>
-              const CircularProgressIndicator(),
+              placeholder: (context, url) => SpinKitRing(color: AppColors.lightGrey,size: widget.indicatorSize,),
               errorWidget: (context, url, error) => const Icon(Icons.error),
               height: widget.imageHeight,
               width: widget.imageWidth,

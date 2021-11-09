@@ -1,23 +1,17 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:omar_alshyokh_test/blocs/application/application_bloc.dart';
-import 'package:omar_alshyokh_test/blocs/application/application_state.dart';
-import 'package:omar_alshyokh_test/blocs/main/root_page_bloc.dart';
 import 'package:omar_alshyokh_test/constants/app_theme.dart';
 import 'package:omar_alshyokh_test/constants/strings.dart';
 import 'package:omar_alshyokh_test/data/repo/repository.dart';
 import 'package:omar_alshyokh_test/di/components/service_locator.dart';
-import 'package:omar_alshyokh_test/state/category_store.dart';
-import 'package:omar_alshyokh_test/ui/splash/splash.dart';
-import 'package:omar_alshyokh_test/utils/routes/routes.dart';
+import 'package:omar_alshyokh_test/state_management/category_store.dart';
 import 'package:omar_alshyokh_test/stores/language/language_store.dart';
 import 'package:omar_alshyokh_test/stores/theme/theme_store.dart';
+import 'package:omar_alshyokh_test/ui/splash/splash.dart';
 import 'package:omar_alshyokh_test/utils/locale/app_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:provider/provider.dart';
+import 'package:omar_alshyokh_test/utils/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -26,14 +20,12 @@ class MyApp extends StatelessWidget {
   final ThemeStore _themeStore = ThemeStore(getIt<Repository>());
   final LanguageStore _languageStore = LanguageStore(getIt<Repository>());
 
-
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
       ),
-
       child: StoreProvider<AppState>(
         store: Redux.store,
         child: MaterialApp(

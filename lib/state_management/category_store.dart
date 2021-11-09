@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
-import 'package:omar_alshyokh_test/state/category_actions.dart';
-import 'package:omar_alshyokh_test/state/category_reducer.dart';
-import 'package:omar_alshyokh_test/state/category_state.dart';
+import 'package:omar_alshyokh_test/state_management/category_actions.dart';
+import 'package:omar_alshyokh_test/state_management/category_reducer.dart';
+import 'package:omar_alshyokh_test/state_management/category_state.dart';
 import 'package:redux/redux.dart';
 
 import 'package:redux_thunk/redux_thunk.dart';

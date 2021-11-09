@@ -18,4 +18,11 @@ class UserManagementRepository {
       this._managementApi, this._sharedPrefsHelper, this._managementDataSource);
 
 
+  Future<String?> get authToken async {
+    return _sharedPrefsHelper.authToken;
+  }
+  Future<bool> saveAuthToken(String authToken) async  {
+    return _sharedPrefsHelper.saveAuthToken(authToken);
+  }
+
 }
