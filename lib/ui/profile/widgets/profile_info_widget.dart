@@ -292,7 +292,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
               ),
             ),
             VerticalPadding(
-              percentage: 0.25,
+              percentage: 0.3,
             ),
 
             FadeInLeft(
